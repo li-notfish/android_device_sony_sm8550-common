@@ -4,6 +4,9 @@ audio.offload.min.duration.secs=30
 # Adaptive Suspend
 suspend.short_suspend_threshold_millis=5000
 
+# Battery
+ro.config.small_battery=true
+
 # Camera
 camera.disable_zsl_mode=true
 
