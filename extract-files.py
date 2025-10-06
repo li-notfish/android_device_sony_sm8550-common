@@ -18,6 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/sony/sm8550-common',
     'hardware/qcom-caf/sm8550',
     'hardware/qcom-caf/wlan',
     'hardware/sony',
@@ -137,6 +138,16 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
+    'system_ext/lib64/libaudiohalvendorextn.so': blob_fixup()
+    .replace_needed(
+        'av-audio-types-aidl-V1-ndk.so', 'av-audio-types-aidl-ndk.so'
+    )
+    .replace_needed(
+        'android.media.audio.common.types-V3-ndk.so', 'android.media.audio.common.types-V4-ndk.so'
+    )
+    .add_needed(
+        'av-audio-types-aidl-V1-ndk_shim.so'
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
