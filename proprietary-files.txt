@@ -1014,6 +1014,13 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
+# Mmwave
+vendor/bin/hw/vendor.semc.hardware.mmwavedirection@1.1-service
+vendor/etc/init/vendor.semc.hardware.mmwavedirection@1.1-service.rc
+vendor/lib64/libmmwavemodule.so
+vendor/lib64/vendor.semc.hardware.mmwavedirection@1.0.so
+vendor/lib64/vendor.semc.hardware.mmwavedirection@1.1.so
+
 # Modem
 vendor/bin/mlog_qmi_service
 vendor/etc/init/mlog_qmi_service.rc
@@ -1168,6 +1175,7 @@ vendor/etc/init/init.qti.qcv.rc
 vendor/bin/qesdk-manager
 vendor/etc/init/qesdk-manager.rc
 vendor/etc/seccomp_policy/qesdk.policy
+vendor/lib/dumb|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/vendor.qti.qesdhal@1.0.so
@@ -1416,10 +1424,16 @@ vendor/bin/subsystem_ramdump
 # Secd
 system_ext/lib64/libMiscTaWrapper.so:vendor/lib64/libMiscTaWrapper.so
 system_ext/etc/permissions/jp.co.sony.mc.misctasdklibrary.xml
+system_ext/etc/permissions/org.ifaa.android.manager.xml
 system_ext/framework/jp.co.sony.mc.misctasdklibrary.jar
+system_ext/framework/org.ifaa.android.manager.jar
+system_ext/lib64/libifaateeclientjni.sony.so
+system_ext/lib64/vendor.somc.hardware.ifaa@1.0.so
+vendor/bin/hw/vendor.semc.hardware.ifaa@1.0-service
 vendor/bin/hw/vendor.semc.hardware.secd@1.1-service
 vendor/bin/hw/vendor.somc.hardware.miscta@1.0-service
 vendor/etc/init/init.taqmi.rc
+vendor/etc/init/vendor.semc.hardware.ifaa@1.0-service.rc
 vendor/etc/init/vendor.semc.hardware.secd@1.1-service.rc
 vendor/etc/init/vendor.somc.hardware.miscta@1.0-service.rc
 vendor/lib64/libdevice_security_vendor.so
@@ -1427,6 +1441,7 @@ vendor/lib64/libifaa.so
 vendor/lib64/libmiscta.so
 vendor/lib64/librkp.so
 vendor/lib64/libsuntory.so
+vendor/lib64/vendor.somc.hardware.ifaa@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.somc.hardware.miscta@1.0.so
 vendor/lib64/vendor.somc.hardware.security.secd@1.1.so
 
@@ -1436,6 +1451,19 @@ vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
+
+# Secure Processor
+system_ext/etc/permissions/com.qti.media.secureprocessor.xml
+system_ext/framework/com.qti.media.secureprocessor.jar
+system_ext/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
+system_ext/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
+system_ext/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
+vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so;MODULE_SUFFIX=_vendor
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
