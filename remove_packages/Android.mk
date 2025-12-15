@@ -12,7 +12,8 @@ LOCAL_OVERRIDES_PACKAGES += \
     YouTube \
     Drive \
     SafetyHubSuwPrebuilt \
-	PrebuiltGmail
+    PrebuiltGmail \
+    Camera2
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
