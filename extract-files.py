@@ -180,6 +180,17 @@ blob_fixups: blob_fixups_user_type = {
     .add_line_if_missing(
         'sched_setparam: 1'
     ),
+    (
+     'vendor/etc/init/vendor.semc.system.idd@1.1-service.rc',
+     'vendor/etc/init/init.sony.idd.rc',
+     ): blob_fixup()
+	.regex_replace(r'writepid.*', 'task_profiles ServiceCapacityLow'),
+    (
+     'vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc',
+     'vendor/etc/init/vendor.qti.media.c2@1.0-service.rc',
+     'vendor/etc/init/android.hardware.drm-service.widevine.rc'
+    ): blob_fixup()
+	.regex_replace(r'writepid.*', 'task_profiles ProcessCapacityHigh HighPerformance'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
