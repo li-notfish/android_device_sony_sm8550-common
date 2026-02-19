@@ -13,7 +13,8 @@ LOCAL_OVERRIDES_PACKAGES += \
     Drive \
     SafetyHubSuwPrebuilt \
     PrebuiltGmail \
-    Camera2
+    Camera2 \
+    Music
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
