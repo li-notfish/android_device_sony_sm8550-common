@@ -510,12 +510,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
-TARGET_SUPPORTS_BATTERY_CARE := true
-TARGET_SUPPORTS_IMAGE_ENHANCEMENT := true
-TARGET_SUPPORTS_SOUND_ENHANCEMENT := true
-
 # XperiaModules
-$(call inherit-product, hardware/sony/XperiaModules.mk)
-
+PRODUCT_PACKAGES += \
+    XperiaCharger \
+    XperiaDisplay \
+    XperiaSettings
+    
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
