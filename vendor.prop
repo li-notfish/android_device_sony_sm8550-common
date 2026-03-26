@@ -251,6 +251,7 @@ ro.camera.notify_nfc=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+vendor.perf.framepacing.enable=1
 
 # Radio
 ro.boot.product.hardware.sku=ds
