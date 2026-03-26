@@ -234,6 +234,8 @@ ro.surface_flinger.uclamp.min=205
 
 # HWUI
 ro.hwui.render_ahead=3
+renderthread.skia.reduceopstasksplitting=true
+debug.hwui.renderer=skiavk
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=40
 debug.hwui.render_thread_count=2
