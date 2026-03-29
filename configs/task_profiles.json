@@ -209,7 +209,7 @@
           "Name" : "JoinCgroup",
           "Params" :
           {
-            "Controller": "schedtune",
+            "Controller": "cpu",
             "Path": "audio-app"
           }
         }
