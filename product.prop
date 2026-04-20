@@ -7,3 +7,7 @@ remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 import /odm/etc/customization/${ro.boot.hardware.sku}/config.prop *
+
+# Bluetooth
+persist.bluetooth.bqr.event_mask=295006
+ro.bluetooth.leaudio_switcher.supported=true
