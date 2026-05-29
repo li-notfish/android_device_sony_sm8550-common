@@ -608,7 +608,7 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBusyHystNs",
-      "Duration": 200,
+      "Duration": 0,
       "Value": "99"
     },
     {
@@ -670,6 +670,18 @@
       "Node": "SchedDownmigrate",
       "Value": "85 10",
       "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "SchedBusyHystNs",
+      "Duration": 0,
+      "Value": "3"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "SchedBusyHystEnableCPUs",
+      "Duration": 0,
+      "Value": "15"
     },
     {
       "PowerHint": "LAUNCH",
