@@ -808,24 +808,6 @@
     },
     {
       "PowerHint": "GAME",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "615000000"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPUBWMinFreq",
-      "Duration": 0,
-      "Value": "681000"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "LLCCBWMinFreq",
-      "Duration": 0,
-      "Value": "466000"
-    },
-    {
-      "PowerHint": "GAME",
       "Node": "GAME_ADPF_PROFILES",
       "Duration": 0,
       "Value": "GAME_PROFILE"
@@ -1283,7 +1265,7 @@
       "PID_Du": 0.0,
       "UclampMin_On": true,
       "UclampMin_Init": 220,
-      "UclampMin_High": 512,
+      "UclampMin_High": 448,
       "UclampMin_Low": 10,
       "UclampMin_LoadUp": 180,
       "UclampMin_LoadReset": 150,
