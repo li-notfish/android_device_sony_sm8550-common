@@ -676,12 +676,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "SchedUpmigrate",
-      "Value": "90 90",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterAdaptiveLowFreq",
       "Value": "556800",
       "Duration": 0
@@ -700,27 +694,9 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "SchedDownmigrate",
-      "Value": "85 85",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CpuMaxFreqParameters",
       "Duration": 0,
       "Value": "0:1459200 1:1459200 2:1459200 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "SchedBusyHystNs",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "SchedBusyHystEnableCPUs",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "LAUNCH",
