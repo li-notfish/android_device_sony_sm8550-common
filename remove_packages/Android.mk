@@ -14,7 +14,8 @@ LOCAL_OVERRIDES_PACKAGES += \
     SafetyHubSuwPrebuilt \
     PrebuiltGmail \
     Camera2 \
-    Music
+    Music \
+    MusicFX
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
