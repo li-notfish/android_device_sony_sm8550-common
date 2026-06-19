@@ -143,7 +143,8 @@
         "0:1670400 1:1670400 2:1670400 3:1651200 4:1651200 5:1651200 6:1651200 7:2227200",
         "3:844800 4:844800 5:844800 6:844800 7:998400",
         "3:844800 4:844800 5:844800 6:844800",
-        "3:1056000 4:1056000 5:1056000 6:1056000"
+        "3:1056000 4:1056000 5:1056000 6:1056000",
+        "3:1056000 4:1056000 5:1056000 6:1056000 7:998400"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -216,7 +217,9 @@
         "0:1017600 1:1017600 2:1017600 3:940800 4:940800 5:940800 6:940800 7:864000",
         "0:1017600 1:1017600 2:1017600 3:1056000 4:1056000 5:1056000 6:1056000 7:998400",
         "0:1017600 1:1017600 2:1017600 3:1401600 4:1401600 5:1401600 6:1401600 7:1132800",
-        "0:1670400 1:1670400 2:1670400 3:1651200 4:1651200 5:1651200 6:1651200 7:2227200"
+        "0:1670400 1:1670400 2:1670400 3:1651200 4:1651200 5:1651200 6:1651200 7:2227200",
+        "0:1017600 1:1017600 2:1017600",
+        "3:1056000 4:1056000 5:1056000 6:1056000 7:998400"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -236,6 +239,7 @@
       "Values": [
         "0",
         "30",
+        "40",
         "50"
       ],
       "DefaultIndex": 0,
@@ -255,6 +259,7 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
+        "20",
         "30",
         "50"
       ],
@@ -266,6 +271,8 @@
       "Path": "/proc/sys/walt/sched_busy_hyst_ns",
       "Values": [
         "99",
+        "30",
+        "25",
         "20",
         "3",
         "0"
@@ -277,6 +284,7 @@
       "Path": "/proc/sys/walt/sched_busy_hysteresis_enable_cpus",
       "Values": [
         "255",
+        "31",
         "15",
         "3",
         "0"
@@ -332,7 +340,7 @@
         "550000000",
         "401000000"
       ],
-      "DefaultIndex": 1,
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -410,7 +418,7 @@
         "1024000",
         "1555000"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -469,6 +477,7 @@
         "466000",
         "1066000"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -506,7 +515,7 @@
       "Path": "vendor.powerhal.state",
       "Values": [
         "SUSTAINED_PERFORMANCE",
-        ""
+        "LOW_POWER"
       ],
       "Type": "Property"
     },
@@ -582,7 +591,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "401000000"
+      "Value": "550000000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -597,172 +606,70 @@
       "Value": "547000"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterAdaptiveHighFreq",
-      "Value": "1017600",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterAdaptiveHighFreq",
-      "Value": "1056000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigPlusClusterAdaptiveHighFreq",
-      "Value": "998400",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
+      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "UclampTAMin",
-      "Duration": 1500,
-      "Value": "30"
+      "Duration": 0,
+      "Value": "0"
     },
     {
-      "PowerHint": "INTERACTION",
+      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "UclampFGMin",
-      "Duration": 0,
-      "Value": "30"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "UclampTALatency",
-      "Duration": 1500,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedBusyHystEnableCPUs",
-      "Duration": 200,
-      "Value": "15"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedBusyHystNs",
-      "Duration": 0,
-      "Value": "20"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterCtlMinCpus",
-      "Value": "3",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForColoc",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForBoost",
       "Duration": 0,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "SchedMinTaskUtilForUclamp",
-      "Duration": 200,
-      "Value": "40"
+      "Node": "SchedBusyHystNs",
+      "Value": "3",
+      "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUBigPlusClusterCtlMinCpus",
+      "Node": "SchedBusyHystEnableCPUs",
+      "Value": "15",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "UclampTALatency",
       "Value": "1",
       "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterAdaptiveLowFreq",
-      "Value": "556800",
+      "Node": "CpuMinFreqParameters",
+      "Value": "0:1017600 1:1017600 2:1017600",
       "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterAdaptiveLowFreq",
-      "Value": "1056000",
+      "Node": "UclampTAMin",
+      "Value": "30",
       "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigPlusClusterAdaptiveLowFreq",
-      "Value": "864000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CpuMaxFreqParameters",
-      "Duration": 0,
-      "Value": "0:1459200 1:1459200 2:1459200 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "SchedBoost",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CpuMaxFreqParameters",
-      "Value": "0:9999999 1:9999999 2:9999999 3:9999999 4:9999999 5:9999999 6:9999999 7:9999999",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CpuMinFreqParameters",
-      "Value": "0:1017600 1:1017600 2:1017600 3:1056000 4:1056000 5:1056000 6:1056000 7:998400",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "LLCCBWMinFreq",
-      "Value": "466000",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 1000,
-      "Value": "44"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUBWMinFreq",
-      "Value": "1024000",
-      "Duration": 1000
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "L3MinFreq",
-      "Value": "864000",
+      "Value": "1",
       "Duration": 1000
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
-      "Duration": 1200,
-      "Value": "50"
+      "Value": "40",
+      "Duration": 1000
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "UclampFGMin",
-      "Duration": 1200,
-      "Value": "50"
+      "Node": "UclampTALatency",
+      "Value": "1",
+      "Duration": 1000
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "GPUForceRailOn",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUIdleTimer",
-      "Duration": 1000,
-      "Value": "1000"
+      "Node": "PMQoSCpuDmaLatency",
+      "Value": "44",
+      "Duration": 1000
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -774,25 +681,13 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "615000000"
+      "Value": "550000000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUIdleTimer",
       "Duration": 0,
       "Value": "1000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CpuMinFreqParameters",
-      "Duration": 0,
-      "Value": "0:1017600 1:1017600 2:1017600 3:1401600 4:1401600 5:1401600 6:1401600 7:1132800"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CpuMaxFreqParameters",
-      "Duration": 0,
-      "Value": "0:1459200 1:1459200 2:1459200 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
@@ -809,8 +704,92 @@
     {
       "PowerHint": "GAME",
       "Node": "GAME_ADPF_PROFILES",
+      "Value": "GAME_PROFILE",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CpuMaxFreqParameters",
+      "Value": "0:1459200 1:1459200 2:1459200 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CpuMinFreqParameters",
+      "Value": "0:1017600 1:1017600 2:1017600 3:1056000 4:1056000 5:1056000 6:1056000 7:998400",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "UclampTAMin",
+      "Value": "40",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "UclampFGMin",
+      "Value": "20",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "SchedBusyHystNs",
+      "Value": "25",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "SchedBusyHystEnableCPUs",
+      "Value": "31",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBWMinFreq",
+      "Value": "1024000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "LLCCBWMinFreq",
+      "Value": "1066000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "PowerHALMainState",
       "Duration": 0,
-      "Value": "GAME_PROFILE"
+      "Value": "LOW_POWER"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CpuMaxFreqParameters",
+      "Value": "3:1056000 4:1056000 5:1056000 6:1056000 7:998400",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "GPUMaxFreq",
+      "Value": "401000000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "UclampTAMin",
+      "Value": "0",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "UclampFGMin",
+      "Value": "0",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBWMinFreq",
+      "Value": "547000",
+      "Duration": 0
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
@@ -1189,90 +1168,78 @@
       "Node": "CpuMinFreqParameters",
       "Value": "0:1670400 1:1670400 2:1670400 3:1651200 4:1651200 5:1651200 6:1651200 7:2227200",
       "Duration": 1000
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "CpuMaxFreqParameters",
-      "Duration": 3600000,
-      "Value": "3:844800 4:844800 5:844800 6:844800 7:998400"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "GPUMaxFreq",
-      "Duration": 3600000,
-      "Value": "401000000"
     }
   ],
   "AdpfConfig": [
     {
       "Name": "DEFAULT",
       "PID_On": true,
-      "PID_Po": 2.0,
-      "PID_Pu": 1.0,
+      "PID_Po": 1.2,
+      "PID_Pu": 0.6,
       "PID_I": 0.0,
-      "PID_I_Init": 200,
-      "PID_I_High": 512,
-      "PID_I_Low": -30,
+      "PID_I_Init": 160,
+      "PID_I_High": 420,
+      "PID_I_Low": -40,
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 185,
-      "UclampMin_High": 384,
+      "UclampMin_Init": 60,
+      "UclampMin_High": 160,
       "UclampMin_Low": 2,
-      "UclampMin_LoadUp": 150,
-      "UclampMin_LoadReset": 150,
+      "UclampMin_LoadUp": 100,
+      "UclampMin_LoadReset": 120,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
       "SamplingWindow_D": 1,
       "ReportingRateLimitNs": 166666660,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 20.0
+      "StaleTimeFactor": 15.0
     },
     {
       "Name": "SYSTEM_UI_PROFILE",
       "PID_On": true,
-      "PID_Po": 2.0,
-      "PID_Pu": 1.0,
+      "PID_Po": 1.5,
+      "PID_Pu": 0.8,
       "PID_I": 0.0,
-      "PID_I_Init": 200,
-      "PID_I_High": 512,
+      "PID_I_Init": 0,
+      "PID_I_High": 128,
       "PID_I_Low": -30,
-      "PID_Do": 500.0,
+      "PID_Do": 300.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 150,
-      "UclampMin_High": 300,
+      "UclampMin_Init": 100,
+      "UclampMin_High": 220,
       "UclampMin_Low": 2,
-      "UclampMin_LoadUp": 100,
-      "UclampMin_LoadReset": 100,
+      "UclampMin_LoadUp": 120,
+      "UclampMin_LoadReset": 140,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
       "SamplingWindow_D": 1,
-      "ReportingRateLimitNs": 166666660,
+      "ReportingRateLimitNs": 8333333,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 20.0
+      "StaleTimeFactor": 10.0
     },
     {
       "Name": "GAME_PROFILE",
       "PID_On": true,
-      "PID_Po": 2.0,
-      "PID_Pu": 1.0,
+      "PID_Po": 1.0,
+      "PID_Pu": 0.3,
       "PID_I": 0.0,
-      "PID_I_Init": 220,
-      "PID_I_High": 600,
-      "PID_I_Low": -30,
-      "PID_Do": 500.0,
+      "PID_I_Init": 0,
+      "PID_I_High": 120,
+      "PID_I_Low": -40,
+      "PID_Do": 300.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 220,
-      "UclampMin_High": 448,
+      "UclampMin_Init": 120,
+      "UclampMin_High": 254,
       "UclampMin_Low": 10,
-      "UclampMin_LoadUp": 180,
-      "UclampMin_LoadReset": 150,
+      "UclampMin_LoadUp": 140,
+      "UclampMin_LoadReset": 160,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
       "SamplingWindow_D": 1,
-      "ReportingRateLimitNs": 166666660,
+      "ReportingRateLimitNs": 8333333,
       "TargetTimeFactor": 1.0,
       "StaleTimeFactor": 15.0
     }
