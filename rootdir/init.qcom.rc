@@ -268,6 +268,12 @@ on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
+    # Change lm related dirs
+    mkdir /data/vendor/lm 0700 root root
+
+    # Create directory used by powermodule
+    mkdir /data/vendor/pwr 0700 root root
+
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
 
@@ -367,9 +373,17 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
+    #Create PERFD deamon related dirs
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
+
     mkdir /data/vendor/secure_element 0777 system system
 
     mkdir /data/vendor/nfc 0770 nfc nfc
+
+    #Create IOP  deamon related dirs
+    mkdir /data/vendor/iop 0700 root system
 
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
@@ -421,6 +435,13 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     group nfc
     user system
     oneshot
+
+service iop /system/vendor/bin/iop
+    class main
+    user root
+    group root
+    disabled
+    socket iop seqpacket 0666 root system
 
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
@@ -494,8 +515,6 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     chown media audio /sys/kernel/aud_dev/state
     write /sys/devices/virtual/cvp/cvp/boot 1
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
 
 # corefile limit
 on property:persist.debug.trace=1
