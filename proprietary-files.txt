@@ -906,6 +906,13 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+
+# Identity
+vendor/bin/hw/android.hardware.identity-service-qti
+vendor/etc/init/android.hardware.identity-service-qti.rc
+vendor/etc/vintf/manifest/manifest_identity_credential.xml
+vendor/lib64/libqtiidentitycredential.so
+
 # Kernel
 vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.post_boot.sh
@@ -914,13 +921,18 @@ vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
 
 # Keymaster
-vendor/bin/hw/android.hardware.security.keymint-service-qti
-vendor/etc/init/android.hardware.security.keymint-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
+vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc|21178f2505737bb920c1a645a2d014e9fa613b10
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
+
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service-qti
+vendor/etc/init/android.hardware.security.keymint-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 vendor/lib64/libspcom.so
 
