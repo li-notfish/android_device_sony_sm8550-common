@@ -247,14 +247,6 @@ system_ext/etc/hdr_config/wnr_off/wnr_config.txt
 system_ext/etc/hdr_config/wnr_off/wnr_params.txt|e07d5c871dee6ee330c521877d85a47e0956b97d
 system_ext/etc/hdr_config/wnr_on/wnr_config.txt
 system_ext/etc/hdr_config/wnr_on/wnr_params.txt|af87900e4dd490d30a074093646512cd0d235f38
-vendor/etc/DrangeparaAAC128.bin
-vendor/etc/DrangeparaAAC256.bin
-vendor/etc/DrangeparaAAC64.bin
-vendor/etc/DrangeparaMP3_128.bin
-vendor/etc/DrangeparaMP3_160.bin
-vendor/etc/DrangeparaMP3_192.bin
-vendor/etc/DrangeparaPCM441.bin
-vendor/etc/DrangeparaPCM48.bin
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
