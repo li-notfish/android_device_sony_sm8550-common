@@ -159,7 +159,7 @@ blob_fixups: blob_fixups_user_type = {
         'av-audio-types-aidl-V1-ndk.so', 'av-audio-types-aidl-ndk.so'
     )
     .replace_needed(
-        'android.media.audio.common.types-V3-ndk.so', 'android.media.audio.common.types-V4-ndk.so'
+        'android.media.audio.common.types-V3-ndk.so', 'android.media.audio.common.types-V5-ndk.so'
     )
     .add_needed(
         'av-audio-types-aidl-V1-ndk_shim.so'
