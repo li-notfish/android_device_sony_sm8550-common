@@ -128,7 +128,8 @@
       "Values": [
         "95 95",
         "50 85",
-        "95 35"
+        "95 35",
+        "95 50"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -139,7 +140,8 @@
       "Values": [
         "85 85",
         "10 85",
-        "85 10"
+        "85 10",
+        "85 30"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -515,7 +517,7 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBoost",
-      "Value": "2",
+      "Value": "1",
       "Duration": 0
     },
     {
@@ -557,19 +559,19 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigPlusClusterCtlMinCpus",
-      "Value": "1",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedUpmigrate",
-      "Value": "95 35",
+      "Value": "0",
       "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedDownmigrate",
-      "Value": "85 10",
+      "Value": "85 30",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "SchedUpmigrate",
+      "Value": "95 50",
       "Duration": 0
     },
     {
@@ -599,13 +601,13 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterFreqPl",
-      "Value": "0",
+      "Value": "1",
       "Duration": 0
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterFreqPl",
-      "Value": "0",
+      "Value": "1",
       "Duration": 0
     },
     {
