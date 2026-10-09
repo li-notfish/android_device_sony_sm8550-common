@@ -431,7 +431,9 @@
       "Values": [
         "401000000",
         "348000000",
-        "295000000"
+        "295000000",
+        "220000000",
+        "124800000"
       ],
       "DefaultIndex": 2,
       "ResetOnInit": true
@@ -502,6 +504,18 @@
       "Node": "PowerHALMainState",
       "Duration": 0,
       "Value": "SUSTAINED_PERFORMANCE"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CpuMaxFreqParameters",
+      "Duration": 0,
+      "Value": "0:1228800 1:1228800 2:1228800 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "GPUMaxFreq",
+      "Duration": 0,
+      "Value": "550000000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -1042,6 +1056,12 @@
       "Node": "CpuMaxFreqParameters",
       "Value": "0:1459200 1:1459200 2:1459200 3:2016000 4:2016000 5:2016000 6:2016000 7:2227200",
       "Duration": 0
+    },
+    {
+      "PowerHint": "Flipendo",
+      "Node": "CpuMaxFreqParameters",
+      "Duration": 0,
+      "Value": "0:1228800 1:1228800 2:1228800 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
