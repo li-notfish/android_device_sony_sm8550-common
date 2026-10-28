@@ -422,20 +422,19 @@
         "475000000",
         "401000000"
       ],
-      "DefaultIndex": 1,
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "401000000",
         "348000000",
         "295000000",
         "220000000",
         "124800000"
       ],
-      "DefaultIndex": 2,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -515,7 +514,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "550000000"
+      "Value": "475000000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -1041,6 +1040,12 @@
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUMinFreq",
+      "Value": "348000000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPUBWMinFreq",
       "Value": "681000",
       "Duration": 0
@@ -1049,12 +1054,6 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "LLCCBWMinFreq",
       "Value": "806000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CpuMaxFreqParameters",
-      "Value": "0:1459200 1:1459200 2:1459200 3:2016000 4:2016000 5:2016000 6:2016000 7:2227200",
       "Duration": 0
     },
     {
