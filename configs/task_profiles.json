@@ -605,7 +605,7 @@
           "Params":
           {
             "Name": "MemSwappiness",
-            "Value": "120"
+            "Value": "150"
 
           }
         }
