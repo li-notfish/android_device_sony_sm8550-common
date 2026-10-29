@@ -315,6 +315,7 @@
       "Name": "CpuMaxFreqParameters",
       "Path": "/sys/kernel/msm_performance/parameters/cpu_max_freq",
       "Values": [
+        "0:1459200 1:1459200 2:1459200 3:2016000 4:2016000 5:2016000 6:2016000 7:1708800",
         "0:1228800 1:1228800 2:1228800 3:1536000 4:1536000 5:1536000 6:1536000 7:1708800",
         "0:1459200 1:1459200 2:1459200 3:2016000 4:2016000 5:2016000 6:2016000 7:2227200",
         "3:844800 4:844800 5:844800 6:844800",
@@ -550,18 +551,6 @@
       "PowerHint": "INTERACTION",
       "Node": "L3MinFreq",
       "Value": "864000",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedBusyHystEnableCPUs",
-      "Value": "255",
-      "Duration": 0
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedBusyHystNs",
-      "Value": "99",
       "Duration": 0
     },
     {
