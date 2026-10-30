@@ -104,6 +104,19 @@
       ]
     },
     {
+      "Name": "BackgroundUclampCap",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "UClampMax",
+            "Value": "62.5"
+          }
+        }
+      ]
+    },
+    {
       "Name": "Frozen",
       "Actions": [
         {
@@ -706,7 +719,7 @@
     },
     {
       "Name": "SCHED_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "LowIoPriority", "TimerSlackHigh" ]
+      "Profiles": [ "HighEnergySaving", "BackgroundUclampCap", "LowIoPriority", "TimerSlackHigh" ]
     },
     {
       "Name": "SCHED_SP_FOREGROUND",
@@ -738,7 +751,7 @@
     },
     {
       "Name": "CPUSET_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "LowIoPriority", "TimerSlackHigh" ]
+      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "BackgroundUclampCap", "LowIoPriority", "TimerSlackHigh" ]
     },
     {
       "Name": "CPUSET_SP_FOREGROUND",
